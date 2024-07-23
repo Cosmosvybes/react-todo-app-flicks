@@ -12,9 +12,21 @@ const Task = ({ taskName, id, allTask, taskSetter, isCompleted }) => {
     taskSetter(remainingTask);
   };
 
+  // handle set task complete
+  const handleSetTaskComplete = (id) => {
+    //getting the task id
+    //  Ternary operator takes a condition, if this condition is truthy, the first value will run, otherwise the next value runs!
+
+    let newUpdate = allTask.map((task) => {
+      return task.id == id ? { ...task, isCompleted: !task.isCompleted } : task;
+    });
+    taskSetter(newUpdate);
+  };
+
   return (
     <>
       <div
+        onClick={() => handleSetTaskComplete(id)}
         className="task"
         style={{
           borderLeft: isCompleted ? "5px solid green" : "5px solid yellow",
