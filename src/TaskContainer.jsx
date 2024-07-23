@@ -6,7 +6,7 @@ const TaskContainer = ({ tasks, taskSetter }) => {
       <div className="task-container">
         {tasks.map((task) => (
           <Task
-            taskName={task.taskName}
+            taskName={task.task}
             key={task.id}
             id={task.id}
             allTask={tasks}

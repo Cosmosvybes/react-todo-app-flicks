@@ -18,7 +18,7 @@
 }
 .add-task-btn {
   background-color: green;
-  padding: 10px 10px;
+  padding: 5px 5px;
   color: white;
   width: auto;
   border-radius: 5px;
@@ -40,8 +40,10 @@
 }
 
 .task {
+  gap: 1rem;
+  font-size: small;
   border: 1px solid green;
-  width: 50%;
+  width: auto;
   padding: 10px 10px;
   background-color: lightgray;
   display: flex;
